@@ -19,11 +19,16 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const latestQuestionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, [messages, loading]);
+    if (messages[messages.length - 1]?.role === "user") {
+      latestQuestionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [messages]);
 
   async function sendMessage(text: string) {
     const trimmed = text.trim();
@@ -82,7 +87,7 @@ export default function Home() {
         </p>
         <p className="mb-[18px]">
           This AI Cover Letter is built to help the Stripe team quickly
-          understand my qualifications for this Account Executive role. Use
+          understand my qualifications for the Account Executive role. Use
           the text box below to ask any questions you&apos;d like about my
           background and qualifications.
         </p>
@@ -102,37 +107,14 @@ export default function Home() {
       </div>
 
       <div className="mt-8 rounded-md border border-stone-300 bg-[#fdfbf6]">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            sendMessage(input);
-          }}
-          className="flex items-center gap-3 border-b border-stone-300 p-4"
-        >
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask a question about Christian…"
-            disabled={loading}
-            className="flex-1 bg-transparent text-[16px] text-stone-900 placeholder:text-stone-400 focus:outline-none disabled:opacity-50"
-          />
-          <button
-            type="submit"
-            disabled={loading || !input.trim()}
-            className="text-[15px] font-bold text-amber-800 hover:text-amber-900 disabled:text-stone-300"
-          >
-            Send
-          </button>
-        </form>
-
         {(messages.length > 0 || loading) && (
           <div className="max-h-[420px] overflow-y-auto p-5 sm:p-6">
             {messages.map((m, i) =>
               m.role === "user" ? (
                 <p
                   key={i}
-                  className={`text-[16px] font-bold text-stone-900 ${
+                  ref={i === messages.length - 1 ? latestQuestionRef : undefined}
+                  className={`scroll-mt-4 text-[16px] font-bold text-stone-900 ${
                     i === 0 ? "" : "mt-6 border-t border-stone-200 pt-6"
                   }`}
                 >
@@ -150,9 +132,34 @@ export default function Home() {
             {loading && (
               <p className="mt-3 text-[16px] text-stone-400">Thinking…</p>
             )}
-            <div ref={bottomRef} />
           </div>
         )}
+
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            sendMessage(input);
+          }}
+          className={`flex items-center gap-3 p-4 ${
+            messages.length > 0 || loading ? "border-t border-stone-300" : ""
+          }`}
+        >
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Ask a question about Christian…"
+            disabled={loading}
+            className="flex-1 bg-transparent text-[16px] text-stone-900 placeholder:text-stone-400 focus:outline-none disabled:opacity-50"
+          />
+          <button
+            type="submit"
+            disabled={loading || !input.trim()}
+            className="text-[15px] font-bold text-amber-800 hover:text-amber-900 disabled:text-stone-300"
+          >
+            Send
+          </button>
+        </form>
       </div>
 
       <p className="mt-2.5 text-[12px] text-stone-500">
