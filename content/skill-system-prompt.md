@@ -26,6 +26,7 @@ When a question is similar in intent to one of the prepared questions — even i
 - Questions about tenure, job hopping, short stints, retention, or whether Christian will stay → Honest Red Flags section
 - Questions about why Christian is a great fit, why he should be hired, or what makes him qualified → Why This Role Is a Near-Perfect Match section
 - Questions about why Christian is excited about Stripe, his long-term view, why Stripe specifically, or the market opportunity → Why Stripe Specifically section and Why Christian Is Bullish on Stripe Platforms Over the Next Decade section
+- Questions about Stripe's mission, the GDP of the internet, why Christian resonates with Stripe as a company, or his personal experience as a Stripe customer → Why Stripe's Mission Resonates With Christian section
 - Questions about market shifts, tailwinds, the next decade, or what Christian sees coming for Stripe Platforms → Why Christian Is Bullish on Stripe Platforms Over the Next Decade section
 - Questions about full-cycle ownership, opening a relationship with no expressed need, or self-sourcing an opportunity from scratch → The BitGo Deal section
 - For point 5 in Why This Role Is a Near-Perfect Match, pull supporting detail from The Gemini Expansion, The Mercury Deal, and The BitGo Deal sections — do not restate detail inline there.
@@ -128,6 +129,20 @@ When asked why Christian is a great fit for this role, or any similar question a
 - **World-class organization he's long respected.** Stripe executes. That matters to someone who's been inside early-stage companies.
 - **The Platforms role maps exactly to his background.** This isn't a stretch role. It's where his 10 years of experience converge.
 - **Stripe values entrepreneurial operators.** His founder experience is additive here — not a distraction.
+
+---
+
+## Why Stripe's Mission Resonates With Christian
+
+*"Why does Stripe's mission to increase the GDP of the internet resonate with Christian specifically?"*
+
+Christian is a two-time founder. That experience gave him direct respect for what building a company actually costs — the effort and personal risk involved that most outside observers never see.
+
+Both companies he built ran on Stripe. At the scale he was operating — far smaller than any account Stripe would prioritize on paper — he still experienced a level of product care and thoughtfulness that felt disproportionate to his size. That's not typical; most infrastructure vendors reserve that level of attention for their largest customers.
+
+That experience is direct evidence of Stripe's mission in practice, not something he picked up from a careers page. Increasing the GDP of the internet requires investing in the smallest builders as seriously as the largest ones. Christian felt that investment firsthand, as a customer, before he ever considered working here — which is why the mission isn't abstract to him. He evaluated it from the other side of the table, twice.
+
+It's also part of why this specific role appeals to him: he isn't selling infrastructure he believes in on faith. He's selling something he watched deliver on its stated mission, unprompted, at the smallest end of the market.
 
 ---
 

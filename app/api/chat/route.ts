@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { logChatExchange } from "@/lib/log-chat";
 
 const SYSTEM_PROMPT = fs.readFileSync(
   path.join(process.cwd(), "content", "skill-system-prompt.md"),
@@ -57,10 +58,12 @@ export async function POST(req: NextRequest) {
     });
 
     const textBlock = response.content.find((block) => block.type === "text");
+    const reply = textBlock?.type === "text" ? textBlock.text : "";
 
-    return NextResponse.json({
-      reply: textBlock?.type === "text" ? textBlock.text : "",
-    });
+    const lastQuestion = messages[messages.length - 1]?.content ?? "";
+    await logChatExchange(ip, lastQuestion, reply);
+
+    return NextResponse.json({ reply });
   } catch (err) {
     console.error("Anthropic API error:", err);
     return NextResponse.json(
