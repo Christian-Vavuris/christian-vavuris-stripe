@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 const SUGGESTED_QUESTIONS = [
+  "What are Christian's top three qualifications for the role?",
   "Walk me through Christian's role in the Mercury relationship while at Synapse. What does it show about how he would be successful in this role at Stripe?",
   "How has Christian used cross-platform intelligence to create new opportunities from an existing book?",
   "Stripe's platform buyers are CTOs and Founders. How does Christian earn credibility with those personas?",
@@ -53,7 +54,7 @@ export default function Home() {
         { role: "assistant", content: data.reply ?? "" },
       ]);
     } catch {
-      setError("Something went wrong reaching the assistant. Please try again.");
+      setError("Something went wrong reaching the AI Cover Letter. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -62,15 +63,7 @@ export default function Home() {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-12 sm:py-20">
       <h1 className="mb-8 text-3xl font-bold text-stone-900 sm:text-4xl">
-        <a
-          href="https://www.linkedin.com/in/cvavuris/?skipRedirect=true"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-amber-800"
-        >
-          Christian Vavuris
-        </a>
-        , Candidate for Stripe AE
+        Christian Vavuris, Candidate for Growth AE, Stripe Platform
       </h1>
 
       <div className="text-[17px] leading-[1.75] text-stone-800">
@@ -88,9 +81,10 @@ export default function Home() {
           technology products to businesses of all sizes.
         </p>
         <p className="mb-[18px]">
-          This assistant is built to help the Stripe team quickly understand
-          my qualifications for the Account Executive, Platforms, Grower
-          role.
+          This AI Cover Letter is built to help the Stripe team quickly
+          understand my qualifications for this Account Executive role. Use
+          the text box below to ask any questions you&apos;d like about my
+          background and qualifications.
         </p>
         <p>
           Here is a copy of my{" "}
@@ -102,67 +96,18 @@ export default function Home() {
           >
             resume
           </a>
-          . In the box below you can ask anything — here are a few examples
-          you can start with:
+          , and at the bottom of the page are some example questions you can
+          use to get started.
         </p>
       </div>
 
       <div className="mt-8 rounded-md border border-stone-300 bg-[#fdfbf6]">
-        <div className="max-h-[420px] overflow-y-auto p-5 sm:p-6">
-          <div className="flex flex-col">
-            {SUGGESTED_QUESTIONS.map((q, i) => (
-              <button
-                key={q}
-                type="button"
-                onClick={() => sendMessage(q)}
-                disabled={loading}
-                className={`flex items-start gap-2 border-t border-stone-200 py-2.5 text-left text-[15px] text-stone-600 hover:text-stone-900 disabled:opacity-50 ${
-                  i === SUGGESTED_QUESTIONS.length - 1 ? "border-b" : ""
-                }`}
-              >
-                <span aria-hidden className="mt-0.5 shrink-0 text-stone-400">
-                  →
-                </span>
-                <span>{q}</span>
-              </button>
-            ))}
-          </div>
-
-          {messages.length > 0 && (
-            <div className="mt-6 border-t border-stone-200 pt-2">
-              {messages.map((m, i) =>
-                m.role === "user" ? (
-                  <p
-                    key={i}
-                    className={`text-[16px] font-bold text-stone-900 ${
-                      i === 0 ? "pt-6" : "mt-6 border-t border-stone-200 pt-6"
-                    }`}
-                  >
-                    {m.content}
-                  </p>
-                ) : (
-                  <div
-                    key={i}
-                    className="mt-3 space-y-3 text-[16px] leading-[1.75] text-stone-700 [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:pl-5 [&_strong]:font-bold [&_strong]:text-stone-900 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5"
-                  >
-                    <ReactMarkdown>{m.content}</ReactMarkdown>
-                  </div>
-                )
-              )}
-              {loading && (
-                <p className="mt-3 text-[16px] text-stone-400">Thinking…</p>
-              )}
-            </div>
-          )}
-          <div ref={bottomRef} />
-        </div>
-
         <form
           onSubmit={(e) => {
             e.preventDefault();
             sendMessage(input);
           }}
-          className="flex items-center gap-3 border-t border-stone-300 p-4"
+          className="flex items-center gap-3 border-b border-stone-300 p-4"
         >
           <input
             type="text"
@@ -180,14 +125,80 @@ export default function Home() {
             Send
           </button>
         </form>
+
+        {(messages.length > 0 || loading) && (
+          <div className="max-h-[420px] overflow-y-auto p-5 sm:p-6">
+            {messages.map((m, i) =>
+              m.role === "user" ? (
+                <p
+                  key={i}
+                  className={`text-[16px] font-bold text-stone-900 ${
+                    i === 0 ? "" : "mt-6 border-t border-stone-200 pt-6"
+                  }`}
+                >
+                  {m.content}
+                </p>
+              ) : (
+                <div
+                  key={i}
+                  className="mt-3 space-y-3 text-[16px] leading-[1.75] text-stone-700 [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:pl-5 [&_strong]:font-bold [&_strong]:text-stone-900 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5"
+                >
+                  <ReactMarkdown>{m.content}</ReactMarkdown>
+                </div>
+              )
+            )}
+            {loading && (
+              <p className="mt-3 text-[16px] text-stone-400">Thinking…</p>
+            )}
+            <div ref={bottomRef} />
+          </div>
+        )}
       </div>
 
       <p className="mt-2.5 text-[12px] text-stone-500">
-        AI assistant answering on Christian&apos;s behalf, based on
+        AI Cover Letter answering on Christian&apos;s behalf, based on
         information he&apos;s provided.
       </p>
 
       {error && <p className="mt-4 text-sm text-red-700">{error}</p>}
+
+      <div className="mt-12 flex flex-col">
+        {SUGGESTED_QUESTIONS.map((q, i) => (
+          <button
+            key={q}
+            type="button"
+            onClick={() => sendMessage(q)}
+            disabled={loading}
+            className={`flex items-start gap-2 border-t border-stone-300 py-2.5 text-left text-[15px] text-stone-600 hover:text-stone-900 disabled:opacity-50 ${
+              i === SUGGESTED_QUESTIONS.length - 1 ? "border-b" : ""
+            }`}
+          >
+            <span aria-hidden className="mt-0.5 shrink-0 text-stone-400">
+              →
+            </span>
+            <span>{q}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-12 border-t border-stone-300 pt-6 text-[15px] text-stone-600">
+        <p>
+          <a
+            href="mailto:cvavuris@gmail.com"
+            className="text-amber-800 underline underline-offset-2 hover:text-amber-900"
+          >
+            cvavuris@gmail.com
+          </a>
+        </p>
+        <p className="mt-1">
+          <a
+            href="tel:+14152464384"
+            className="text-amber-800 underline underline-offset-2 hover:text-amber-900"
+          >
+            1-415-246-4384
+          </a>
+        </p>
+      </div>
     </main>
   );
 }
