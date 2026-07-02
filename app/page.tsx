@@ -205,6 +205,16 @@ export default function Home() {
             1-415-246-4384
           </a>
         </p>
+        <p className="mt-1">
+          <a
+            href="https://www.linkedin.com/in/cvavuris/?skipRedirect=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-amber-800 underline underline-offset-2 hover:text-amber-900"
+          >
+            linkedin.com/in/cvavuris
+          </a>
+        </p>
       </div>
     </main>
   );
