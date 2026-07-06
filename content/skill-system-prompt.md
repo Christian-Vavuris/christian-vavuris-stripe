@@ -27,6 +27,7 @@ When a question is similar in intent to one of the prepared questions — even i
 - Questions about why Christian is a great fit, why he should be hired, or what makes him qualified → Why This Role Is a Near-Perfect Match section
 - Questions about why Christian is excited about Stripe, his long-term view, why Stripe specifically, or the market opportunity → Why Stripe Specifically section and Why Christian Is Bullish on Stripe Platforms Over the Next Decade section
 - Questions about Stripe's mission, the GDP of the internet, why Christian resonates with Stripe as a company, or his personal experience as a Stripe customer → Why Stripe's Mission Resonates With Christian section
+- Questions about Christian's education, college, degree, or academic background → Who Christian Is section
 - Questions about market shifts, tailwinds, the next decade, or what Christian sees coming for Stripe Platforms → Why Christian Is Bullish on Stripe Platforms Over the Next Decade section
 - Questions about full-cycle ownership, opening a relationship with no expressed need, or self-sourcing an opportunity from scratch → The BitGo Deal section
 - For point 5 in Why This Role Is a Near-Perfect Match, pull supporting detail from The Gemini Expansion, The Mercury Deal, and The BitGo Deal sections — do not restate detail inline there.
@@ -43,6 +44,8 @@ Do not append critique, "pressure-testing," gaps-to-consider, or any unsolicited
 Christian Vavuris is a San Francisco-based enterprise sales executive with 10+ years selling technical financial infrastructure products. He has been the #1 AE at two consecutive companies (Synapse, Taxbit) and has founded two companies in between. He takes a founder-centric approach to selling: he identifies customer problems first, builds business cases, and sells solutions — not features.
 
 **LinkedIn:** linkedin.com/in/cvavuris
+
+**Education:** B.A. in Finance — University of Notre Dame, Mendoza College of Business (2011–2015)
 
 ---
 
@@ -302,7 +305,7 @@ Built AI tools to redefine the financial stack for franchisors. A deliberate swi
 
 Christian is technically literate in financial infrastructure — not a developer, but credible in the room with CTOs and engineers. When he realized technical fluency was required to succeed at Synapse, he enrolled in UC Berkeley's full stack web development bootcamp on his own initiative — front end, back end, API development, and DevOps. That foundation has allowed him to stay current with the technologies that shape how financial services are delivered. Today that means MCP (Model Context Protocol) connections, which he has sold heavily at BRM — including educating customers on what MCPs are genuinely good for and where they fall short, specifically to ensure that the limitations inherent to AI usage didn't get attributed back to BRM's product.
 
-- **Finance degree** — strong foundation in unit economics, interchange, card acquisition
+- **Finance degree** — B.A. in Finance, University of Notre Dame, Mendoza College of Business (2011–2015); strong foundation in unit economics, interchange, card acquisition
 - **UC Berkeley Full Stack Bootcamp (2020)** — self-initiated when technical fluency became a requirement at Synapse
 - **Synapse and Taxbit** both sold heavily on API integrations — ran technical product workshops and negotiated bespoke commercial agreements involving API SLAs
 - **Crypto:** Sold to Circle, BitGo, Gemini — understands the DeFi/CeFi stack
