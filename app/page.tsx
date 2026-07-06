@@ -7,7 +7,7 @@ const SUGGESTED_QUESTIONS = [
   "What are Christian's top three qualifications for the role?",
   "Walk me through Christian's role in the Mercury relationship while at Synapse. What does it show about how he would be successful in this role at Stripe?",
   "How has Christian used cross-platform intelligence to create new opportunities from an existing book?",
-  "Stripe's platform buyers are CTOs and Founders. How does Christian earn credibility with those personas?",
+  "Stripe platform buyers are CTOs, Founders, Product Professionals, and Executives. How does Christian earn credibility with these personas?",
   "Why is Christian genuinely excited about this role — and what market shifts does he see driving demand for Stripe Platforms over the next decade?",
   "How does Christian account for the incentives of partner banks — or Stripe when utilizing its own licenses — when selling platform deals?",
 ];
@@ -176,11 +176,14 @@ export default function Home() {
             type="button"
             onClick={() => sendMessage(q)}
             disabled={loading}
-            className={`flex items-start gap-2 border-t border-stone-300 py-2.5 text-left text-[15px] text-stone-600 hover:text-stone-900 disabled:opacity-50 ${
+            className={`group flex items-start gap-2 border-t border-stone-300 px-2 py-2.5 text-left text-[15px] text-stone-600 transition-colors hover:bg-stone-100/60 hover:text-amber-800 disabled:opacity-50 ${
               i === SUGGESTED_QUESTIONS.length - 1 ? "border-b" : ""
             }`}
           >
-            <span aria-hidden className="mt-0.5 shrink-0 text-stone-400">
+            <span
+              aria-hidden
+              className="mt-0.5 shrink-0 text-stone-400 transition-colors group-hover:text-amber-800"
+            >
               →
             </span>
             <span>{q}</span>

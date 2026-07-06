@@ -170,7 +170,7 @@ The Platforms AE motion — selling embedded financial infrastructure to softwar
 
 ## CTOs and Founders Question
 
-*"Stripe's platform buyers are CTOs and Founders. How does Christian earn credibility with those personas?"*
+*"Stripe platform buyers are CTOs, Founders, Product Professionals, and Executives. How does Christian earn credibility with these personas?"*
 
 Two proof points, in order.
 
