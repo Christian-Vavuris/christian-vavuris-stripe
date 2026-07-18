@@ -4,12 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 const SUGGESTED_QUESTIONS = [
-  "What are Christian's top three qualifications for the role?",
-  "Walk me through Christian's role in the Mercury relationship while at Synapse. What does it show about how he would be successful in this role at Stripe?",
+  "What are Christian's top three qualifications as an Account Executive candidate at Stripe?",
+  "Walk me through Christian's role in the Mercury relationship while at Synapse. What does it show about how he would be successful at Stripe?",
   "How has Christian used cross-platform intelligence to create new opportunities from an existing book?",
   "How would Christian create new opportunities at target accounts that don't yet have a relationship with Stripe — and what deals from his past demonstrate that approach?",
   "Stripe's enterprise buyers are CTOs, Founders, Product Professionals, and Executives. How does Christian earn credibility with these personas?",
-  "Why is Christian genuinely excited about this role — and what market shifts does he see driving demand for embedded finance at Stripe over the next decade?",
   "How does Christian account for the incentives of partner banks — or Stripe when utilizing its own licenses — when structuring embedded finance deals?",
 ];
 

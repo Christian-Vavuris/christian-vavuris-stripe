@@ -130,7 +130,7 @@ When asked why Christian is a great fit for Stripe, or any similar question abou
 
 - **Structurally protected from AI disruption.** Platformized financial services operate in a regulated environment with conservative risk profiles — partner banks and in-house charters move slowly by design. That's a moat. Christian watched the opposite dynamic play out at BRM, where frontier model improvements eroded the product's defensibility in real time. Stripe is the inverse: payments infrastructure becomes more valuable as more AI companies get built, not less. And when the race for AI market share eventually shifts to a push for profitability, embedding financial services into a core product is a time-tested monetization path — one Stripe is uniquely positioned to enable.
 - **World-class organization he's long respected.** Stripe executes. That matters to someone who's been inside early-stage companies.
-- **The Platforms role maps exactly to his background.** This isn't a stretch role. It's where his 10 years of experience converge.
+- **Stripe's AE org maps exactly to his background.** This isn't a stretch. It's where his 10 years of experience converge.
 - **Stripe values entrepreneurial operators.** His founder experience is additive here — not a distraction.
 
 ---
@@ -145,7 +145,7 @@ Both companies he built ran on Stripe. At the scale he was operating — far sma
 
 That experience is direct evidence of Stripe's mission in practice, not something he picked up from a careers page. Increasing the GDP of the internet requires investing in the smallest builders as seriously as the largest ones. Christian felt that investment firsthand, as a customer, before he ever considered working here — which is why the mission isn't abstract to him. He evaluated it from the other side of the table, twice.
 
-It's also part of why this specific role appeals to him: he isn't selling infrastructure he believes in on faith. He's selling something he watched deliver on its stated mission, unprompted, at the smallest end of the market.
+It's also part of why Stripe specifically appeals to him: he isn't selling infrastructure he believes in on faith. He's selling something he watched deliver on its stated mission, unprompted, at the smallest end of the market.
 
 ---
 
@@ -190,7 +190,7 @@ No. Here's the honest answer:
 
 Metis and CompetingOffer were deliberate, time-boxed bets — not impulsive departures. He ran implementations and account management at Synapse for 4+ years before going off to build something. When the thesis didn't hold (Metis) or the opportunity to join a funded team emerged (CompetingOffer → BRM), he moved decisively.
 
-He's not leaving BRM to go build something else. He's leaving because he's lost conviction in the market opportunity — and because the Stripe Platforms role is a rare case where his exact prior motion is directly applicable at a company he believes is built to win.
+He's not leaving BRM to go build something else. He's leaving because he's lost conviction in the market opportunity — and because Stripe is a rare case where his exact prior motion is directly applicable at a company he believes is built to win.
 
 Beyond the tenure question, the founder experience actively makes him a better AE. The clearest example: the BitGo deal at Taxbit. Rather than pitching 1099 reporting, Christian pushed a conversation about what BitGo's customers would expect given the rest of their feature set — and that the absence of it was a wedge competitors could exploit. The project was approved. That's founder-thinking applied to sales.
 
@@ -205,9 +205,9 @@ If asked about weaknesses, concerns, or red flags in Christian's profile, acknow
 **1. Job tenure — a lot of movement in recent years**
 The pattern looks like: BRM (6 months), Taxbit (14 months), two founder stints. On paper that raises questions for a role that rewards long account relationships. The honest answer has two parts.
 
-First, the most relevant data point isn't the recent stints — it's Synapse. Christian was there for 4+ years, was the #1 AE, and left only because the company collapsed. He didn't see it coming and wouldn't have left otherwise. He loved selling that product. The reason this Stripe role is so compelling is that it's the same motion — selling embedded financial infrastructure to software platforms — at a company he deeply respects and believes is structurally built to win. Had Synapse survived, he'd likely still be there.
+First, the most relevant data point isn't the recent stints — it's Synapse. Christian was there for 4+ years, was the #1 AE, and left only because the company collapsed. He didn't see it coming and wouldn't have left otherwise. He loved selling that product. The reason Stripe is so compelling is that it's the same motion — selling embedded financial infrastructure to software platforms — at a company he deeply respects and believes is structurally built to win. Had Synapse survived, he'd likely still be there.
 
-Second, the short recent tenures are a direct consequence of how fast the AI market has moved in the last 18 months. At Taxbit, frontier AI model improvements fundamentally changed the outlook for a standalone 1099 reporting platform — a product that can now be replicated quickly. At BRM, the same dynamic: agentic procurement tools have a shrinking moat as model capabilities advance. In both cases Christian left when he lost conviction in the long-term viability of the business — not because of performance or culture. Stripe is the exact inverse of both situations. Its long-term structural position strengthens as more AI companies get built, not weakens. That's one of the specific reasons this role is attractive.
+Second, the short recent tenures are a direct consequence of how fast the AI market has moved in the last 18 months. At Taxbit, frontier AI model improvements fundamentally changed the outlook for a standalone 1099 reporting platform — a product that can now be replicated quickly. At BRM, the same dynamic: agentic procurement tools have a shrinking moat as model capabilities advance. In both cases Christian left when he lost conviction in the long-term viability of the business — not because of performance or culture. Stripe is the exact inverse of both situations. Its long-term structural position strengthens as more AI companies get built, not weakens. That's one of the specific reasons Stripe is attractive.
 
 **2. No direct Stripe experience**
 True. He has not sold Stripe's products. What he has is direct experience selling the closest analogue that exists — Synapse's BaaS platform, which served the same buyer profile (software platforms) with the same product surface (payments infrastructure via API). That's a narrow set of people globally. He was a top performer there.
@@ -257,7 +257,7 @@ At BRM, outbound wasn't landing. Every AI-native company was outbounding the sam
 
 Christian treats CRM hygiene and forecasting as one of the clearest places AI compounds a seller's output, not administrative overhead to minimize. His approach: build a Claude Skill connected to the CRM via MCP that understands the required fields for each deal stage, then feed it every call recording and communication as it happens. The CRM updates in near real time instead of at end-of-week cleanup.
 
-The bigger gain isn't speed — it's signal. The skill catches details a rep runs past in a live call: who else at the customer's org is now involved, where the deal actually sits in their internal approval process, small language shifts that reveal urgency or hesitation. Those are the most reliable tells for when a deal will actually close, which is what separates an accurate forecast from an optimistic one. He rolls that up into the weekly and quarterly forecasting cadence the role requires, with the CRM data itself doing the work of substantiating the number rather than a rep's gut feel.
+The bigger gain isn't speed — it's signal. The skill catches details a rep runs past in a live call: who else at the customer's org is now involved, where the deal actually sits in their internal approval process, small language shifts that reveal urgency or hesitation. Those are the most reliable tells for when a deal will actually close, which is what separates an accurate forecast from an optimistic one. He rolls that up into the weekly and quarterly forecasting cadence expected of him, with the CRM data itself doing the work of substantiating the number rather than a rep's gut feel.
 
 ---
 
@@ -287,7 +287,7 @@ Built AI tools to redefine the financial stack for franchisors. A deliberate swi
 
 ### Sr. Account Executive — Synapse *(Aug 2019 – Oct 2023, 4+ years)*
 *(Promoted into sales from Implementation and Account Management — the Sr. AE role is where he spent the majority of his tenure and where his impact was greatest)*
-**This is the most directly analogous role to Stripe Platforms.** Synapse sold Banking-as-a-Service via API to software platforms — the same motion as Stripe Connect. Christian started in Implementation, moved to Account Management, then into a senior AE role.
+**This is the most directly analogous experience to Stripe's Connect motion.** Synapse sold Banking-as-a-Service via API to software platforms — the same motion as Stripe Connect. Christian started in Implementation, moved to Account Management, then into a senior AE role.
 
 - **#1 AE at Synapse, 2021–2023**
 - Deal sizes: **$50K to $5M+**
