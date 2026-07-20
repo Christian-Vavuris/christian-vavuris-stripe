@@ -3,6 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
+const PLACEHOLDER_DEFAULT = "Ask a question about Christian…";
+
+const PLACEHOLDER_EXAMPLES = [
+  "What are Christian's top three qualifications?",
+  "How does Christian earn credibility with CTOs and founders?",
+  "How has Christian created new opportunities from an existing book?",
+];
+
 const SUGGESTED_QUESTIONS = [
   "What are Christian's top three qualifications as an Account Executive candidate at Stripe?",
   "Walk me through Christian's role in the Mercury relationship while at Synapse. What does it show about how he would be successful at Stripe?",
@@ -39,7 +47,51 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [placeholder, setPlaceholder] = useState(PLACEHOLDER_DEFAULT);
   const latestQuestionRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (messages.length > 0 || input) {
+      setPlaceholder(PLACEHOLDER_DEFAULT);
+      return;
+    }
+
+    let cancelled = false;
+    const wait = (ms: number) =>
+      new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+    async function animate() {
+      while (!cancelled) {
+        for (const question of PLACEHOLDER_EXAMPLES) {
+          for (let i = 1; i <= question.length; i++) {
+            if (cancelled) return;
+            setPlaceholder(question.slice(0, i));
+            await wait(28);
+          }
+          await wait(1100);
+          for (let i = question.length; i >= 0; i--) {
+            if (cancelled) return;
+            setPlaceholder(question.slice(0, i));
+            await wait(16);
+          }
+          await wait(250);
+        }
+        for (let i = 0; i < 3 && !cancelled; i++) {
+          setPlaceholder("...");
+          await wait(500);
+          if (cancelled) return;
+          setPlaceholder("");
+          await wait(500);
+        }
+      }
+    }
+
+    animate();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [messages.length, input]);
 
   useEffect(() => {
     if (messages[messages.length - 1]?.role === "user") {
@@ -170,7 +222,7 @@ export default function Home() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask a question about Christian…"
+            placeholder={placeholder}
             disabled={loading}
             className="flex-1 bg-transparent text-[16px] text-[#0a2540] placeholder:text-slate-400 focus:outline-none disabled:opacity-50"
           />
